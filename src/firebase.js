@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID,
+  apiKey: "AIzaSyD3Q0uxN1ja0UFJ7z9vll_UM7lg3q3H0BE",
+  authDomain: "weather-app-8ec3e.firebaseapp.com",
+  projectId: "weather-app-8ec3e",
+  storageBucket: "weather-app-8ec3e.appspot.com",
+  messagingSenderId: "180288020924",
+  appId: "1:180288020924:web:a787b50d983baf588ccbb9",
 };
 
 // Initialize Firebase
