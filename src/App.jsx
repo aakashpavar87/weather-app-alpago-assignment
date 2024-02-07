@@ -14,6 +14,7 @@ import ProtectedRoute from './components/widgets/ProtectedRoute';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCurrentUser } from './store/features/userSlice';
 import NotFound from './page/NotFound';
+import { Weather } from './page/Weather';
 
 
 function App() {
@@ -51,6 +52,13 @@ function App() {
                   path="/notes"
                   element={
                     < Notes />
+                  }
+                />
+
+                <Route
+                  path="/weather"
+                  element={
+                    < Weather />
                   }
                 />
 

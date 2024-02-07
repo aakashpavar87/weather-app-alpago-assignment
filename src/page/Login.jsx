@@ -65,7 +65,7 @@ const Login = () => {
                             <div className=" px-10 ">
                                 <div>
                                     <Text className="text-2xl text-white text-center font-bold mb-2">
-                                        Focus<span className="text-tertiary">App</span>
+                                        Weather-Note <span className="text-tertiary">App</span>
                                     </Text>
 
                                     <h2 className="text-white text-center md:text-sm text-xs tracking-tight text-gray-900">
