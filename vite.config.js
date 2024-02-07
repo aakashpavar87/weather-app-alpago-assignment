@@ -12,9 +12,8 @@ export default defineConfig(() => {
       open: true,
     },
     build: {
-      outDir: "build",
+      outDir: "dist",
     },
-    base: "/weather-app-alpago-assignment",
     plugins: [
       react()  
     ],

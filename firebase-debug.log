@@ -1,0 +1,94 @@
+[debug] [2024-02-07T10:55:13.971Z] ----------------------------------------------------------------------
+[debug] [2024-02-07T10:55:13.977Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\My Pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-02-07T10:55:13.978Z] CLI Version:   13.1.0
+[debug] [2024-02-07T10:55:13.979Z] Platform:      win32
+[debug] [2024-02-07T10:55:13.980Z] Node Version:  v18.16.1
+[debug] [2024-02-07T10:55:13.982Z] Time:          Wed Feb 07 2024 16:25:13 GMT+0530 (India Standard Time)
+[debug] [2024-02-07T10:55:13.983Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-07T10:55:14.206Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-07T10:55:14.209Z] > authorizing via signed-in user (aakashpavar87@gmail.com)
+[debug] [2024-02-07T10:55:14.209Z] [iam] checking project weather-app-8ec3e for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-02-07T10:55:14.216Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-8ec3e:testIamPermissions [none]
+[debug] [2024-02-07T10:55:14.216Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-8ec3e:testIamPermissions x-goog-quota-user=projects/weather-app-8ec3e
+[debug] [2024-02-07T10:55:14.217Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-8ec3e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-07T10:55:16.040Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-8ec3e:testIamPermissions 200
+[debug] [2024-02-07T10:55:16.041Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-8ec3e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-07T10:55:16.045Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-8ec3e [none]
+[debug] [2024-02-07T10:55:16.615Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-8ec3e 200
+[debug] [2024-02-07T10:55:16.616Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-8ec3e {"projectId":"weather-app-8ec3e","projectNumber":"180288020924","displayName":"Weather-App","name":"projects/weather-app-8ec3e","resources":{"hostingSite":"weather-app-8ec3e"},"state":"ACTIVE","etag":"1_0028c5bd-7ea4-45d0-80f4-94f89dcf1426"}
+[info] 
+[info] === Deploying to 'weather-app-8ec3e'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-02-07T10:55:16.650Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/versions [none]
+[debug] [2024-02-07T10:55:16.650Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-02-07T10:55:18.270Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/versions 200
+[debug] [2024-02-07T10:55:18.271Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/versions {"name":"projects/180288020924/sites/weather-app-8ec3e/versions/1bcefc3d453144e8","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[weather-app-8ec3e]: beginning deploy... 
+[info] i  hosting[weather-app-8ec3e]: found 12 files in dist 
+[debug] [2024-02-07T10:55:18.318Z] [hosting] uploading with 200 concurrency
+[debug] [2024-02-07T10:55:18.920Z] [hosting] hash cache [ZGlzdA] stored for 12 files
+[debug] [2024-02-07T10:55:18.921Z] [hosting][hash queue][FINAL] {"max":578,"min":57,"avg":172.08333333333334,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":597}
+[debug] [2024-02-07T10:55:18.923Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/180288020924/sites/weather-app-8ec3e/versions/1bcefc3d453144e8:populateFiles [none]
+[debug] [2024-02-07T10:55:18.923Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/180288020924/sites/weather-app-8ec3e/versions/1bcefc3d453144e8:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/index.html":"a290f7dfe5416747853c7afa10770039f47fc91cc8fd43325c3e11dd737017e0","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/_redirects":"b7285c3774a03b8ab20b1adf40cfa2a0cc4580b2e14dd1850484b40b7af4614f","/assets/index-3ee34238.css":"c505cb5b34d5078ae529c89e6225dd464cc948cf54acfb9d4094f3bfdf7ec3f7","/assets/bg-f0c0da7f.png":"ce2440ec339804016c2ab083cf708e7bd464e01f0003b428ea5935912f63906b","/assets/bg-login-af31828c.jpg":"51a3b47a85525c2471095010cbd372039bfa292b21e7f74261275da3004c04f8","/bg-login.jpg":"51a3b47a85525c2471095010cbd372039bfa292b21e7f74261275da3004c04f8","/assets/index-99651bd5.js":"bc3f3e66150681a57609b835d44e2ce6196dd20fc76880ed9b5dc56ca51048fb"}}
+[debug] [2024-02-07T10:55:20.142Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/180288020924/sites/weather-app-8ec3e/versions/1bcefc3d453144e8:populateFiles 200
+[debug] [2024-02-07T10:55:20.143Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/180288020924/sites/weather-app-8ec3e/versions/1bcefc3d453144e8:populateFiles {"uploadRequiredHashes":["a290f7dfe5416747853c7afa10770039f47fc91cc8fd43325c3e11dd737017e0","bc3f3e66150681a57609b835d44e2ce6196dd20fc76880ed9b5dc56ca51048fb"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/weather-app-8ec3e/versions/1bcefc3d453144e8/files"}
+[debug] [2024-02-07T10:55:20.146Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/weather-app-8ec3e/versions/1bcefc3d453144e8/files/a290f7dfe5416747853c7afa10770039f47fc91cc8fd43325c3e11dd737017e0 [none]
+[debug] [2024-02-07T10:55:20.146Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/weather-app-8ec3e/versions/1bcefc3d453144e8/files/a290f7dfe5416747853c7afa10770039f47fc91cc8fd43325c3e11dd737017e0 [stream]
+[debug] [2024-02-07T10:55:20.149Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/weather-app-8ec3e/versions/1bcefc3d453144e8/files/bc3f3e66150681a57609b835d44e2ce6196dd20fc76880ed9b5dc56ca51048fb [none]
+[debug] [2024-02-07T10:55:20.150Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/weather-app-8ec3e/versions/1bcefc3d453144e8/files/bc3f3e66150681a57609b835d44e2ce6196dd20fc76880ed9b5dc56ca51048fb [stream]
+[debug] [2024-02-07T10:55:20.152Z] [hosting][populate queue][FINAL] {"max":1231,"min":1231,"avg":1231,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1237}
+[debug] [2024-02-07T10:55:20.153Z] [hosting] uploads queued: 2
+[debug] [2024-02-07T10:55:21.731Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/weather-app-8ec3e/versions/1bcefc3d453144e8/files/a290f7dfe5416747853c7afa10770039f47fc91cc8fd43325c3e11dd737017e0 200
+[debug] [2024-02-07T10:55:21.731Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/weather-app-8ec3e/versions/1bcefc3d453144e8/files/a290f7dfe5416747853c7afa10770039f47fc91cc8fd43325c3e11dd737017e0 [stream]
+[debug] [2024-02-07T10:55:23.152Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/weather-app-8ec3e/versions/1bcefc3d453144e8/files/bc3f3e66150681a57609b835d44e2ce6196dd20fc76880ed9b5dc56ca51048fb 200
+[debug] [2024-02-07T10:55:23.153Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/weather-app-8ec3e/versions/1bcefc3d453144e8/files/bc3f3e66150681a57609b835d44e2ce6196dd20fc76880ed9b5dc56ca51048fb [stream]
+[debug] [2024-02-07T10:55:23.153Z] [hosting][upload queue][FINAL] {"max":3008,"min":1587,"avg":2297.5,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":3010}
+[info] +  hosting[weather-app-8ec3e]: file upload complete 
+[debug] [2024-02-07T10:55:23.156Z] [hosting] deploy completed after 4877ms
+[debug] [2024-02-07T10:55:23.156Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "weather-app-8ec3e"
+    },
+    "version": "projects/180288020924/sites/weather-app-8ec3e/versions/1bcefc3d453144e8"
+  }
+]
+[info] i  hosting[weather-app-8ec3e]: finalizing version... 
+[debug] [2024-02-07T10:55:23.163Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/versions/1bcefc3d453144e8 updateMask=status%2Cconfig
+[debug] [2024-02-07T10:55:23.164Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/versions/1bcefc3d453144e8 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-02-07T10:55:24.621Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/versions/1bcefc3d453144e8 200
+[debug] [2024-02-07T10:55:24.621Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/versions/1bcefc3d453144e8 {"name":"projects/180288020924/sites/weather-app-8ec3e/versions/1bcefc3d453144e8","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-02-07T10:55:19.408030Z","createUser":{"email":"aakashpavar87@gmail.com"},"finalizeTime":"2024-02-07T10:55:25.863390Z","finalizeUser":{"email":"aakashpavar87@gmail.com"}}
+[debug] [2024-02-07T10:55:24.622Z] [hosting] finalized version for weather-app-8ec3e:[object Object]
+[info] +  hosting[weather-app-8ec3e]: version finalized 
+[info] i  hosting[weather-app-8ec3e]: releasing new version... 
+[debug] [2024-02-07T10:55:24.627Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/channels/live/releases versionName=projects%2F180288020924%2Fsites%2Fweather-app-8ec3e%2Fversions%2F1bcefc3d453144e8
+[debug] [2024-02-07T10:55:24.628Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/channels/live/releases {}
+[debug] [2024-02-07T10:55:25.903Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/channels/live/releases 200
+[debug] [2024-02-07T10:55:25.904Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/weather-app-8ec3e/channels/live/releases {"name":"projects/180288020924/sites/weather-app-8ec3e/channels/live/releases/1707303326776000","version":{"name":"projects/180288020924/sites/weather-app-8ec3e/versions/1bcefc3d453144e8","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-02-07T10:55:19.408030Z","createUser":{"email":"aakashpavar87@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocI8hSBMluPlxFDVkDQIsqEb7lKpWhOA6fFTavKEDhmn5w"},"finalizeTime":"2024-02-07T10:55:25.863390Z","finalizeUser":{"email":"aakashpavar87@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocI8hSBMluPlxFDVkDQIsqEb7lKpWhOA6fFTavKEDhmn5w"}},"type":"DEPLOY","releaseTime":"2024-02-07T10:55:26.776Z","releaseUser":{"email":"aakashpavar87@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocI8hSBMluPlxFDVkDQIsqEb7lKpWhOA6fFTavKEDhmn5w"}}
+[debug] [2024-02-07T10:55:25.904Z] [hosting] release: {"name":"projects/180288020924/sites/weather-app-8ec3e/channels/live/releases/1707303326776000","version":{"name":"projects/180288020924/sites/weather-app-8ec3e/versions/1bcefc3d453144e8","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-02-07T10:55:19.408030Z","createUser":{"email":"aakashpavar87@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocI8hSBMluPlxFDVkDQIsqEb7lKpWhOA6fFTavKEDhmn5w"},"finalizeTime":"2024-02-07T10:55:25.863390Z","finalizeUser":{"email":"aakashpavar87@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocI8hSBMluPlxFDVkDQIsqEb7lKpWhOA6fFTavKEDhmn5w"}},"type":"DEPLOY","releaseTime":"2024-02-07T10:55:26.776Z","releaseUser":{"email":"aakashpavar87@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocI8hSBMluPlxFDVkDQIsqEb7lKpWhOA6fFTavKEDhmn5w"}}
+[info] +  hosting[weather-app-8ec3e]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/weather-app-8ec3e/overview
+[info] Hosting URL: https://weather-app-8ec3e.web.app
+[debug] [2024-02-07T10:55:31.567Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\My Pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:258:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
